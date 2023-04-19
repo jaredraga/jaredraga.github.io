@@ -3,51 +3,170 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About Jared</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- CSS file -->
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+	<!-- Font Family Rajdhani, Abril+Fatface, Bad Script-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Abril+Fatface&family=Bad+Script&display=swap" rel="stylesheet">
+
+	<title>Jared Raga</title>
+
 	<style type="text/css">
-		body {
-			background: url(assets\\bg.png);
-			background-size: cover;
-			background-repeat: no-repeat;
+		@font-face {
+	  font-family: 'Bad Script';
+	  src: url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+		}		
+
+		@font-face {
+	  font-family: 'Rajdhani';
+	  src: url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+		}		
+
+		@font-face {
+	  font-family: 'Abril Fatface';
+	  src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 		}
+
+		html, body, .background {
+			width:100%;
+			height:100%;
+			margin:0;
+		}
+
+		.background {
+			position: fixed;
+			float: left;
+			bottom: 0px;
+			display: block;
+			width: auto;
+			height: auto;
+			z-index: -1;
+		}
+
+		.background img {
+			width: 100%;
+			height: auto;
+		}
+		/**
+		.nav-item:hover {
+			letter-spacing: 6px;
+			margin: -6px;
+		}	
+		**/
+
+		.navbar-brand {
+			font-family: Bad Script, sans-serif;
+		}
+
+		.navbar-nav {
+			font-family: Rajdhani, sans-serif;
+		}
+
+		.container {
+			z-index: 0;
+			font-family: Abril Fatface, sans-serif;
+		}
+
+		@media only screen and (min-width: 768px) {
+			.container {
+				padding-top: 3%;
+				max-width: 70%;
+			  padding-left: 6rem;
+			  text-align: left;
+			  float: left;
+			}
+
+			.container h1{
+				z-index: 0;
+				font-size: 6rem;
+
+			}
+		}
+
+}
+
 	</style>
+
 </head>
 <body>
-	<div class="nameBox">
-		<h1 id="name">Jared  Raga</h1>
+	<div class="background">
+		<img src="assets/homebg3.jpg">
 	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+	  <a class="navbar-brand  mx-5 px-5 fs-2 active" href="#">jared raga</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse mx-auto text-center w-50" id="navbarNav">
+	    <ul class="navbar-nav d-flex justify-content-around w-100 fs-5">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">PORTFOLIO</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">PROJECTS</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          CONTACT
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="javascript:copyText()">Email (Copy to Clipboard)</a>
+	          <a class="dropdown-item" href="https://instagram.com/jrd.rg" target="_blank">Instagram</a>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
 
 	<div class="container">
-		<div class="box">
-			<div class="icon"><i class="fa fa-code" aria-hidden="true"></i></div>
-			<div class="content">
-				<a href="projects.html" id="link"></a>
-				<h2>Projects</h2>
-				<p>Compilation of Jared's programming projects.</p>
-			</div>
-		</div>
-		<div class="box">
-			<div class="icon"><i class="fa fa-history" aria-hidden="true"></i></div>
-			<div class="content">
-				<a href="childhood.html" id="link"></a>
-				<h2>Childhood</h2>
-				<p>Jared's course from child through adulthood.</p>
-			</div>
-		</div>
-		<div class="box">
-			<div class="icon"><i class="fa fa-file-text" aria-hidden="true"></i></div>
-			<div class="content">
-				<a href="resume.html" id="link"></a>
-				<h2>Résumé</h2>
-				<p>Jared's certifications and credentials.</p>
-			</div>
-		</div>
-	</div>
-</body>
-<!-- Wednesday, 15 March 2023 -
-	Multi-day project. Starting to experiment with responsive CSS elements.
--->
+	  <h1>I'm a passionate web developer</h1>
+	  <h1>with a love for clean design and</h1>
+	  <h1>user experience.</h1>
 
+	  <p class="fs-6 fw-lighter fst-italic" style="font-family: Rajdhani, sans-serif;">With a strong foundation in HTML, CSS, JavaScript, and Bootstrap I strive to create innovative and functional websites <br>that exceed expectations. Take a look around and let's explore the possibilities together.</p>
+	</div>
+
+	<script type="text/javascript">
+		function showTooltip(text) {
+		  var tooltip = document.createElement('div');
+		  tooltip.innerText = text;
+		  tooltip.style.position = 'fixed';
+		  tooltip.style.top = '20px';
+		  tooltip.style.left = '50%';
+		  tooltip.style.transform = 'translateX(-50%)';
+		  tooltip.style.padding = '5px';
+		  tooltip.style.background = 'rgba(0, 0, 0, 0.8)';
+		  tooltip.style.color = '#fff';
+		  tooltip.style.fontFamily = 'Arial, sans-serif';
+		  tooltip.style.fontSize = '14px';
+		  tooltip.style.borderRadius = '5px';
+		  document.body.appendChild(tooltip);
+
+		  setTimeout(function() {
+		    document.body.removeChild(tooltip);
+		  }, 1000);
+	}
+
+		function copyText() {
+	   // Copy the text inside the text field
+	  navigator.clipboard.writeText("jaredraga@gmail.com");
+
+	  // Alert the copied text
+	  showTooltip("Copied email to clipboard!");
+	} 
+	</script>
+
+</body>
 </html>
