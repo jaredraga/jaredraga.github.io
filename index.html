@@ -19,6 +19,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Abril+Fatface&family=Bad+Script&display=swap" rel="stylesheet">
 
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
 	<title>Jared Raga</title>
 
 	<style type="text/css">
@@ -57,12 +60,7 @@
 			width: 100%;
 			height: auto;
 		}
-		/**
-		.nav-item:hover {
-			letter-spacing: 6px;
-			margin: -6px;
-		}	
-		**/
+
 
 		.navbar-brand {
 			font-family: Bad Script, sans-serif;
@@ -77,6 +75,26 @@
 			font-family: Abril Fatface, sans-serif;
 		}
 
+		/* For Phone Screens */
+		@media only screen and (max-width: 768px) {
+			.background {
+				position: fixed;
+			  top: 40%; /* change this to match the height of your navbar */
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			 }
+			.dropdown-menu a{
+		    text-align: center;
+ 			 }
+
+			.container p{
+				float: left;
+				max-width: 70%;
+			}
+		}
+
+		/* For PC Screens */
 		@media only screen and (min-width: 768px) {
 			.container {
 				padding-top: 3%;
@@ -96,6 +114,18 @@
 }
 
 	</style>
+
+	<script>
+    /* $(function () {
+		  $('[data-toggle="tooltip"]').tooltip({
+		    delay: { "show": 10, "hide": 0 }
+		  });
+		});
+		*/
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+  </script>
 
 </head>
 <body>
@@ -121,7 +151,7 @@
 	          CONTACT
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="javascript:copyText()">Email (Copy to Clipboard)</a>
+	          <a class="dropdown-item" href="javascript:copyText()" data-bs-toggle="tooltip" title="Copy to clipboard">Email  <i class="bi bi-clipboard2"></i></a>
 	          <a class="dropdown-item" href="https://instagram.com/jrd.rg" target="_blank">Instagram</a>
 	        </div>
 	      </li>
