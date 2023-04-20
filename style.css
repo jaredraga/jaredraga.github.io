@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Bad Script';
+  src: url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+}
+
+@font-face {
+  font-family: 'Abril Fatface';
+  src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+}
+
+.background {
+  position: fixed;
+  float: left;
+  bottom: 0px;
+  display: block;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.background img {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-brand {
+  font-family: Bad Script, sans-serif;
+}
+
+.navbar-nav {
+  font-family: Rajdhani, sans-serif;
+}
+
+.container {
+  z-index: 0;
+  font-family: Abril Fatface, sans-serif;
+}
+
+/* For Phone Screens */
+@media only screen and (max-width: 768px) {
+  .background {
+    position: fixed;
+    top: 40%; /* change this to match the height of your navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+   }
+  .dropdown-menu a{
+    text-align: center;
+  }
+
+  .container p{
+    float: left;
+    max-width: 70%;
+  }
+}
+
+/* For PC Screens */
+@media only screen and (min-width: 768px) {
+  .container {
+    padding-top: 3%;
+    max-width: 70%;
+    padding-left: 6rem;
+    text-align: left;
+    float: left;
+  }
+
+  .container h1{
+    z-index: 0;
+    font-size: 6rem;
+  }
+}
